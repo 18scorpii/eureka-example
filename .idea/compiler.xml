@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-advise-provider" />
+        <module name="eureka-greeting-provider" />
+        <module name="eureka-server" />
+        <module name="eureka-zuul" />
+        <module name="eureka-hystrix-feign" />
+        <module name="hystrix-dashboard" />
+        <module name="eureka-client-feign" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-greetings-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-advise-provider" options="-parameters" />
+      <module name="eureka-client-feign" options="-parameters" />
+      <module name="eureka-greeting-provider" options="-parameters" />
+      <module name="eureka-greetings-provider" options="-parameters" />
+      <module name="eureka-hystrix-feign" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eureka-zuul" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
+    </option>
+  </component>
+</project>

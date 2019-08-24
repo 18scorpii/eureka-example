@@ -1,0 +1,18 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: hystrix-dashboard
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: "${EUREKA_URI:http://localhost:8086/eureka}"
+management:
+  endpoint:
+    hystrix:
+      stream:
+        enabled: true

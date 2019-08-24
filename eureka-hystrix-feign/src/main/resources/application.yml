@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: eureka-hystrix-feign
+server:
+  port: 8081
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: "${EUREKA_URI:http://localhost:8086/eureka}"
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 100
+        readTimeout: 50
+        loggerLevel: basic

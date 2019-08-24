@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: eureka-zuul
+server:
+  port: 8083
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8086/eureka}
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    eureka-greetings-provider:
+        serviceId: eureka-greetings-provider
+        path: /a/**
+    eureka-advise-provider:
+      serviceId: eureka-advise-provider
+      path: /b/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+feign:
+  hystrix:
+    enabled: true

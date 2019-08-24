@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Cloud Examples" type="CompoundRunConfigurationType">
+    <toRun name="Greetings Provider" type="Application" />
+    <toRun name="Feign Client" type="Application" />
+    <toRun name="Zuul Proxy" type="Application" />
+    <toRun name="Eureka Server" type="Application" />
+    <toRun name="Hystrix Feign" type="Application" />
+    <toRun name="Hystrix Dashboard" type="Application" />
+    <toRun name="Advise Provider" type="Application" />
+    <method v="2" />
+  </configuration>
+</component>

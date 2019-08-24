@@ -1,0 +1,15 @@
+spring:
+    application:
+      name: eureka-client-feign
+    main:
+      allow-bean-definition-overriding: true
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8086/eureka}
+  instance:
+    prefer-ip-address: true
+
+

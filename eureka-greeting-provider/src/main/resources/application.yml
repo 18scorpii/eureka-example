@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-greetings-provider
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: "${EUREKA_URI:http://localhost:8086/eureka}"
